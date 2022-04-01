@@ -17,7 +17,38 @@ console.log("Geoff's favourite colour is: " + colours[2])
 
 */
 
+// For of and for in
+function loopOverArray(directions) {
+    // Create empty object
+    object = {};
+
+    // For each entry of directions
+    for(let entry of directions) {
+
+        //If the key for a certain direction already exists in the object, add 1 to value
+        if(entry in object)
+        {
+            object[entry]++;
+        }
+        //Else create the key for the direction with 1 as value
+        else
+        {
+           object[entry] = 1;
+        }
+    }
+    //Return object
+    console.log(object);
+}
+
+loopOverArray(["n", "s", "e", "e"])
+
+
+
+
+
 // Finds the 2 numbers in array that add to target
+
+/*
 function twoSum(nums, target) {
     
     let remaining = 0;
@@ -46,3 +77,4 @@ function twoSum(nums, target) {
 };
 
 twoSum([2,7,11,15], 9);
+*/
