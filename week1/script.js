@@ -17,7 +17,8 @@ console.log("Geoff's favourite colour is: " + colours[2])
 
 */
 
-// For of and for in
+// For of example
+/*
 function loopOverArray(directions) {
     // Create empty object
     object = {};
@@ -41,7 +42,53 @@ function loopOverArray(directions) {
 }
 
 loopOverArray(["n", "s", "e", "e"])
+*/
 
+
+// For in example
+/*
+function loopOverObject(object) {
+    for(let key in object) {
+        
+        console.log(`Key: ${key}; Value: ${object[key]}`);
+
+    }
+}
+
+loopOverObject({foo: "bar", ding: "dong"});
+*/
+
+// User authentication using for of
+function findUser(users, username, password) {
+
+    // Iterate through users to locate the object with username
+    for(let user of users)
+    {
+        if(user.username == username)
+        {
+            if(user.password == password)
+            {
+                // User returned
+                console.log("Authentication complete");
+                return user;
+            }
+            else
+            {
+                // User found but password incorrect
+                console.log("Password incorrect");
+                return false;
+            }
+        }
+        else
+        {
+            // Check next user in users
+        }
+    }
+    
+    // User not found
+    console.log("Doesn't exist");
+    return false;
+}
 
 
 
